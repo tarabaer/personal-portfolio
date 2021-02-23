@@ -8,11 +8,28 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.navlist {
+#navbar {
     display: flex;
     justify-content: flex-end;
-    list-style: none;
+    position: fixed;
+    width: 100%;
     background-color: cornflowerblue;
+}
+
+
+.navlist {
+    display: flex;
+    list-style: none;
+}
+
+.navlist a {
+    display: block;
+    font-size: 1.5em;
+    padding: .75em .5em;
+}
+
+.navlist a:hover {
+    background-color: gray;
 }
 
 #welcome-section {
@@ -23,5 +40,45 @@ body {
     background-color: navy;
     color: white;
     width: 100%;
-    height: 10vh;
+    height: 100vh;
+}
+
+#projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.project-tile {
+    margin: 1em;
+}
+
+.project-tile:hover {
+    color: lightgray;
+}
+
+figcaption {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 980px) {
+    html {
+        font-size: 80%
+    }
+}
+
+@media (max-width: 460px) {
+    html {
+        font-size: 60%;
+    }
 }
