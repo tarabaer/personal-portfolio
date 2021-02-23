@@ -54,6 +54,10 @@ body {
     height: 100vh;
 }
 
+#welcome-section > h1 {
+    font-size: 3.25em;
+}
+
 #projects {
     display: flex;
     flex-wrap: wrap;
