@@ -65,7 +65,6 @@ body {
     align-items: center;
     background-color: var(--tan);
     height: 600px;
-    padding: 5rem 2rem;
 }
 
 .project-tile {
@@ -74,7 +73,7 @@ body {
 }
 
 .project-tile:hover {
-    color: white;
+    color: 'white';
 }
 
 figcaption {
@@ -98,7 +97,7 @@ figcaption > span {
 }
 
 .contact-section-header > h2 {
-    font-size: 5rem;
+    font-size: 4.5rem;
 }
 
 .contact-section-header > p {
