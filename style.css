@@ -68,12 +68,12 @@ body {
 }
 
 .project-tile {
-    color: var(--navy)
+    color: var(--navy);
     margin: 1em;
 }
 
 .project-tile:hover {
-    color: 'white';
+    color: white;
 }
 
 figcaption {
