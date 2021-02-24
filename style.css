@@ -65,14 +65,16 @@ body {
     align-items: center;
     background-color: var(--tan);
     height: 600px;
+    padding: 5rem 2rem;
 }
 
 .project-tile {
+    color: var(--navy)
     margin: 1em;
 }
 
 .project-tile:hover {
-    color: lightgray;
+    color: white;
 }
 
 figcaption {
@@ -90,11 +92,24 @@ figcaption > span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 300px;
+    text-align: center;
+    height: 80vh;
+    padding: 0 2rem;
 }
+
+.contact-section-header > h2 {
+    font-size: 5rem;
+}
+
+.contact-section-header > p {
+    font-size: 1.5rem;
+    padding: .5rem 0rem 2.5rem 0rem;
+}
+
 
 .contact-links {
     display: flex;
+    font-size: 1.25em;
     justify-content: space-evenly;
 }
 
