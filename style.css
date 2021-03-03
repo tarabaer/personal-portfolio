@@ -23,6 +23,7 @@ body {
     position: fixed;
     width: 100%;
     background-color: var(--peach);
+    z-index: 9999;
 }
 
 
