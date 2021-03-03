@@ -34,4 +34,4 @@ let myBool = true
 
 let myArray = [] // this is an empty array
 
-let myArray = {42, "hoe", ANSWER, true, myBool}
+let myArray = [42, "hoe", ANSWER, true, myBool]
