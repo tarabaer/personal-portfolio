@@ -69,3 +69,8 @@ function sumTwoThings(one, two) {
 }
 
 // Arrow functions
+    // a higher order function that accepts another function as a parameter
+
+const theFunction = () => { // multiple lines use curly braces and return
+    return "I am awesome"
+}
