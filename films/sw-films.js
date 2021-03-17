@@ -1,7 +1,5 @@
 import { films } from '../data/films.js'
 
-console.log(films[6])
-
 let filmlist = document.querySelector('#filmlist')
 
 for (let i = 0; i < films.length; i++) {
