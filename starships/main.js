@@ -7,7 +7,7 @@ const navList = document.querySelector('.navList')
 const shipView = document.querySelector('.shipView')
 
 function populateNav(starships) {
-    starships.array.forEach(starship => {
+    starships.forEach(starship => {
         let listItem = document.createElement('li')
         listItem.textContent = starship.name
 
