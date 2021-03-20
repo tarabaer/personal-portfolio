@@ -1,4 +1,5 @@
 import { films } from '../data/films.js'
+import { getLastNumber } from '../utils/index.js'
 
 let filmlist = document.querySelector('#filmlist')
 
@@ -16,7 +17,3 @@ for (let i = 0; i < films.length; i++) {
     filmlist.appendChild(posterFig)
 }
 
-function getLastNumber(url) {
-    let end = url.lastIndexOf('/')
-    return url.charAt(end - 1)
-}
