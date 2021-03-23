@@ -25,8 +25,9 @@ function populateShipView(shipData) {
     let shipNum = getLastNumber(shipData.url)
     let shipImage = document.createElement('img')
     shipImage.src = `https://starwars-visualguide.com/assets/img/starships/${shipNum}.jpg`
-    shipImage.addEventListener('error', () =>{
-        console.log(`Oops! Got an image loading error!`)
+    shipImage.addEventListener('error', (err) => {
+        console.log(`Oops! Image doesn't exist.`)
+        shipImage.hidden = true
     })
     shipView.appendChild(shipImage)
 }
