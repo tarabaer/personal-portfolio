@@ -8,6 +8,15 @@ header {
     text-align: center;
 }
 
+header > h1 {
+    margin: 4px;
+}
+
+header > p {
+    font-size: 18px;
+    margin: 4px;
+}
+
 main {
     display: flex;
     height: 100vh;
