@@ -3,12 +3,31 @@
     box-sizing: border-box;
 }
 
+header {
+    color: white;
+    text-align: center;
+}
+
 main {
     display: flex;
+    height: 100vh;
+}
+
+.shipView {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 nav {
     min-width: 200px;
+}
+
+img, nav {
+    position: relative;
+    z-index: 1;
 }
 
 a {
