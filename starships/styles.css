@@ -7,6 +7,10 @@ main {
     display: flex;
 }
 
+nav {
+    min-width: 200px;
+}
+
 a {
     text-decoration: none;
     color: white;
