@@ -6,10 +6,12 @@
 header {
     color: white;
     text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header > h1 {
     margin: 4px;
+    font-size: xx-large;
 }
 
 header > p {
@@ -29,7 +31,9 @@ main {
 }
 
 nav {
-    width: 200px;
+    width: 250px;
+    margin-left: 15px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 img, nav {
@@ -50,4 +54,9 @@ a {
 
 li {
     list-style-type: none;
+}
+
+footer {
+    padding-top: 30px;
+    text-align: center;
 }
