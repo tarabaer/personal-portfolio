@@ -13,6 +13,7 @@ body {
 
 figure {
     margin: 1em;
+    z-index: 1;
 }
 
 figcaption {
