@@ -6,9 +6,14 @@ body {
     background-color: black;
 }
 
+#div {
+    height: 100vh;
+}
+
 #filmlist {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 figure {

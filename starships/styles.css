@@ -19,19 +19,17 @@ header > p {
 
 main {
     display: flex;
-    height: 100vh;
+    /*height: 100vh;*/
 }
 
 .shipView {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
 }
 
 nav {
-    min-width: 200px;
+    width: 200px;
 }
 
 img, nav {
