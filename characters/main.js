@@ -32,6 +32,7 @@ const otherCharacters = people.filter(person => {
         }
 })
 
+
 function populateDOM(characters) {
     removeChildren(mainElement)
     characters.forEach((person, index) => {
