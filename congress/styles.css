@@ -10,6 +10,14 @@
     justify-content: space-evenly;
 }
 
+header > h1 {
+    text-align: center;
+}
+
+#buttonHeader {
+    text-align: center;
+}
+
 .figureDiv {
     padding: .5em;
     margin: .5em;
