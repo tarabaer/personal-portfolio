@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pokeGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.scene {
+    width: 200px;
+    height: 260px;
+    border: 1px solid black;
+    margin: 10px;
+}

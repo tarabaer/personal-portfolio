@@ -28,4 +28,25 @@ function loadPage() {
 
 function populatePokeCard(singlePokemon) {
     console.log(singlePokemon)
+    let pokeScene = document.createElement('div')
+    pokeScene.className = 'scene'
+    let pokeCard = document.createElement('div')
+    pokeCard.className = 'card'
+
+    pokeCard.appendChild(populateCardFront(singlePokemon))
+    pokeScene.appendChild(pokeCard)
+    pokeGrid.appendChild(pokeScene)
+}
+
+function populateCardFront(pokemon) {
+    let pokeFront = document.createElement('div')
+    pokeFront.className = 'card__face card__face--front'
+    let frontLabel = document.createElement('p')
+    frontLabel.textContent = pokemon.name
+    let frontImage = document.createElement('img')
+    frontImage.src = `pokeimages/001.png`
+
+    pokeFront.appendChild(frontLabel)
+    pokeFront.appendChild(frontImage)
+    return pokeFront
 }
