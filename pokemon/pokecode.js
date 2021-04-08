@@ -34,8 +34,11 @@ function populatePokeCard(singlePokemon) {
     pokeScene.className = 'scene'
     let pokeCard = document.createElement('div')
     pokeCard.className = 'card'
-
+    pokeCard.addEventListener('click', () => {
+        pokeCard.classList.toggle('is-flipped')
+    })
     pokeCard.appendChild(populateCardFront(singlePokemon))
+    pokeCard.appendChild(populateCardBack(singlePokemon))
     pokeScene.appendChild(pokeCard)
     pokeGrid.appendChild(pokeScene)
 }
@@ -52,6 +55,15 @@ function populateCardFront(pokemon) {
     pokeFront.appendChild(frontLabel)
     pokeFront.appendChild(frontImage)
     return pokeFront
+}
+
+function populateCardBack(pokemon) {
+    let pokeBack = document.createElement('div')
+    pokeBack.className = 'card__face card__face--back'
+    let backLabel = document.createElement('p')
+    backLabel.textContent = `Moves: ${pokemon.moves.length}`
+    pokeBack.appendChild(backLabel)
+    return pokeBack
 }
 
 function getImageFileName(pokemon) {
