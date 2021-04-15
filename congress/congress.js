@@ -6,6 +6,7 @@ const congressGrid = document.querySelector(".congressGrid");
 const seniorityButton = document.querySelector("#seniorityButton");
 const birthdayButton = document.querySelector("#birthdayButton");
 const missedVotesButton = document.querySelector("#missedVotes");
+const partyVotesButton = document.querySelector("#partyVotes")
 
 seniorityButton.addEventListener("click", () => {
   senioritySort();
@@ -16,8 +17,16 @@ birthdayButton.addEventListener("click", () => {
 });
 
 missedVotesButton.addEventListener("click", () => {
-  alert(`${missedVotesRep.name} missed votes ${missedVotesRep.missed_votes_pct}% of the time!`);
+  alert(
+    `${missedVotesRep.name} missed votes ${missedVotesRep.missed_votes_pct}% of the time!`
+  );
 });
+
+partyVotesButton.addEventListener('clic', () => {
+    alert(partyVotes)
+})
+
+
 
 function populateCongressGrid(simplePeople) {
   removeChildren(congressGrid);
@@ -49,6 +58,7 @@ function getSimplifiedCongress(congressPeople) {
       seniority: parseInt(person.seniority, 10),
       date_of_birth: parseInt(person.date_of_birth, 10),
       missed_votes_pct: person.missed_votes_pct,
+      votes_with_party_pct: person.votes_with_party_pct,
     };
   });
 }
@@ -74,6 +84,12 @@ const missedVotesRep = getSimplifiedCongress(representatives)
   .filter((rep) => rep.title === "Representative")
   .reduce((acc, rep) =>
     acc.missed_votes_pct > rep.missed_votes_pct ? acc : rep
+  );
+
+const partyVotes = getSimplifiedCongress(representatives)
+  .filter((rep) => rep.title === "Representative")
+  .reduce((acc, rep) =>
+    acc.votes_with_party_pct > rep.votes_with_party_pct ? acc : rep
   );
 
 populateCongressGrid(getSimplifiedCongress(senators));
