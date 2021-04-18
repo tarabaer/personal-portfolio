@@ -2,35 +2,12 @@ const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 const chooseButton = document.querySelector('#chooseYourPokemon')
 
-const dialog = document.querySelector('.modal')
-const closeButton = document.querySelector('.modal-close')
-const modalBackground = document.querySelector('.modal-background')
-const submitButton = document.querySelector('#submitButton')
-
-closeButton.addEventListener('click', () => {
-    dialog.classList.toggle("is-active")
-})
-
-modalBackground.addEventListener('click', () => {
-    dialog.classList.toggle("is-active")
-})
-
-loadButton.addEventListener('click', () => {
-    loadPage()
-})
-
 chooseButton.addEventListener('click', () => {
-    dialog.classList.toggle("is-active")
-    /* getAPIData(`https://pokeapi.co/api/v2/pokemon/25`).then(
-        (data) => {
-            populatePokeCard(data)
-        }
-    )*/
-})
-
-submitButton.addEventListener('click', () => {
-    let inputField = document.querySelector('.input')
-    inputValue = inputField.value
+    let pokeNameOrId = prompt("Enter Pokemon ID or Name:").toLowerCase()
+    console.log(pokeNameOrId)
+    getAPIData(`https://pokeapi.co/api/v2/pokemon/${pokeNameOrId}`).then(
+        (data) => populatePokeCard(data)
+    )
 })
 
 async function getAPIData(url) {
