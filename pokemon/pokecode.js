@@ -1,6 +1,32 @@
 const pokeGrid = document.querySelector('.pokeGrid')
 const loadButton = document.querySelector('.loadPokemon')
 const chooseButton = document.querySelector('#chooseYourPokemon')
+const newButton = document.querySelector('#newButton')
+
+class Pokemon {
+    constructor(name, height, weight, abilities, moves) {
+        this.name = name
+        this.height = height
+        this.weight = weight
+        this.abilities = abilities
+        this.moves = moves
+    }
+}
+
+newButton.addEventListener('click', () => {
+    let pokeName = prompt('Name your new pokemon!')
+    let pokeHeight = prompt('What is the height of your new pokemon?')
+    let pokeWeight = prompt('What is the weight of your pokemon?')
+    let newPokemon = new Pokemon(
+        pokeName,
+        pokeHeight,
+        pokeWeight,
+        ['eat', 'sleep'],
+        ['slap', 'punch']
+    )
+    console.log((newPokemon))
+    populatePokeCard(newPokemon)
+})
 
 chooseButton.addEventListener('click', () => {
     let pokeNameOrId = prompt("Enter Pokemon ID or Name:").toLowerCase()
