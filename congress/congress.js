@@ -6,7 +6,7 @@ const congressGrid = document.querySelector(".congressGrid");
 const seniorityButton = document.querySelector("#seniorityButton");
 const birthdayButton = document.querySelector("#birthdayButton");
 const missedVotesButton = document.querySelector("#missedVotes");
-const partyVotesButton = document.querySelector("#partyVotes")
+const partyVotesButton = document.querySelector("#partyVotes");
 
 seniorityButton.addEventListener("click", () => {
   senioritySort();
@@ -22,10 +22,11 @@ missedVotesButton.addEventListener("click", () => {
   );
 });
 
-partyVotesButton.addEventListener('click', () => {
-    alert(`There are ${partyVotesArray.length} representatives who vote with their party ${partyVotes.votes_with_party_pct}% of the time!`)
-})
-
+partyVotesButton.addEventListener("click", () => {
+  alert(
+    `There are ${partyVotesArray.length} representatives who vote with their party ${partyVotes.votes_with_party_pct}% of the time!`
+  );
+});
 
 function populateCongressGrid(simplePeople) {
   removeChildren(congressGrid);
@@ -91,11 +92,12 @@ const partyVotes = getSimplifiedCongress(representatives)
     acc.votes_with_party_pct > rep.votes_with_party_pct ? acc : rep
   );
 
-const partyVotesArray = getSimplifiedCongress(representatives)
-  .filter((person) => {
-    return person.votes_with_party_pct === partyVotes.votes_with_party_pct
-  })
+const partyVotesArray = getSimplifiedCongress(representatives).filter(
+  (person) => {
+    return person.votes_with_party_pct === partyVotes.votes_with_party_pct;
+  }
+);
 
-console.log(partyVotesArray)
+console.log(partyVotesArray);
 
 populateCongressGrid(getSimplifiedCongress(senators));
