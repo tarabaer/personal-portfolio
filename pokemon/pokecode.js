@@ -5,6 +5,7 @@ const newButton = document.querySelector('#newButton')
 
 class Pokemon {
     constructor(name, height, weight, abilities, moves) {
+        this.id = 900
         this.name = name
         this.height = height
         this.weight = weight
@@ -102,5 +103,8 @@ function getImageFileName(pokemon) {
     if (pokemon.id < 10) pokeId = `00${pokemon.id}`
     if (pokemon.id > 9 && pokemon.id < 100) pokeId = `0${pokemon.id}`
     if (pokemon.id > 99 && pokemon.id < 810) pokeId = pokemon.id
+    if (pokemon.id === 900) {
+        return `pokeimages/pokeball.png`
+    }
     return `https://raw.githubusercontent.com/fanzeyi/pokemon.json/master/images/${pokeId}.png`
 }
