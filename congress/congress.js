@@ -22,10 +22,9 @@ missedVotesButton.addEventListener("click", () => {
   );
 });
 
-partyVotesButton.addEventListener('clic', () => {
-    alert(partyVotes)
+partyVotesButton.addEventListener('click', () => {
+    alert(`There are ${partyVotesArray.length} representatives who vote with their party ${partyVotes.votes_with_party_pct}% of the time!`)
 })
-
 
 
 function populateCongressGrid(simplePeople) {
@@ -91,5 +90,12 @@ const partyVotes = getSimplifiedCongress(representatives)
   .reduce((acc, rep) =>
     acc.votes_with_party_pct > rep.votes_with_party_pct ? acc : rep
   );
+
+const partyVotesArray = getSimplifiedCongress(representatives)
+  .filter((person) => {
+    return person.votes_with_party_pct === partyVotes.votes_with_party_pct
+  })
+
+console.log(partyVotesArray)
 
 populateCongressGrid(getSimplifiedCongress(senators));
