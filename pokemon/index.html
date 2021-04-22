@@ -4,10 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <!--  <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css"
-    />  -->
     <link href="//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon" rel="stylesheet" type="text/css"/>
     <link href="pokestyles.css" rel="stylesheet" />
     <title>Pokemon!</title>
@@ -15,32 +11,15 @@
   <body>
     <header>
       <h1 class="title">Pokémon! Gotta Catch 'em All!</h1>
+      <div class="buttons">
       <button class="loadPokemon">Load Pokémon</button>
       <button id="chooseYourPokemon">Choose Your Pokémon</button>
       <button id="newButton">New Pokemon</button>
+      </div>
     </header>
     <main>
       <div class="pokeGrid"></div>
     </main>
-<!--     <div class="modal is-active">
-      <div class="modal-background"></div>
-      <div class="modal-content">
-        <form class="box">
-          <div class="field">
-            <label class="label">Enter the ID number of the Pokémon you want to catch:</label>
-            <div class="control">
-              <input
-                class="input"
-                type="number"
-                placeholder="e.g. 1 for Bulbasaur"
-              />
-            </div>
-          </div>
-          <button type="submit" id="submitButton" class="button is-primary">Submit</button>
-        </form>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>
-    </div> -->
     <script src="pokecode.js" type="module"></script>
   </body>
 </html>

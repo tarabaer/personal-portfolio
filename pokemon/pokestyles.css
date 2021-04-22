@@ -26,9 +26,27 @@ header > h1 {
     text-shadow: -5px 3px  #3c5aa6 ;
 }
 
-header > button {
+.buttons {
     text-align: center;
 }
+
+.buttons > button:hover {
+    background-color: #3c5aa6;
+    color: #ffcb05;
+    cursor: pointer;
+}
+
+.buttons > button {
+    padding: 10px;
+    margin: 15px;
+    background-color: #ffcb05;
+    color: #3c5aa6;
+    font-family: "Pokemon";
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
 .pokeGrid {
   display: flex;
   flex-wrap: wrap;
@@ -79,6 +97,3 @@ header > button {
   transform: rotateY(180deg);
 }
 
-#submitButton {
-  color: pink;
-}
