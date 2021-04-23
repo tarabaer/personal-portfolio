@@ -108,16 +108,22 @@ function populateCardBack(pokemon) {
   backImage.src = getImageFileName(pokemon);
   pokeBack.appendChild(backImage);
 
+  let pokeName = document.createElement('p')
+  pokeName.className = "pokeName"
+  pokeName.textContent = pokemon.name
+  pokeBack.appendChild(pokeName)
+  
+
   pokemon.types.forEach((pokeType) => {
     let backType = document.createElement("p");
     backType.textContent = `Type: ${pokeType.type.name}`;
     pokeBack.appendChild(backType);
   });
-  pokemon.abilities.forEach((pokeAbility) => {
+  /* pokemon.abilities.forEach((pokeAbility) => {
     let backAbility = document.createElement("p");
     backAbility.textContent = `Ability: ${pokeAbility.ability.name}`;
     pokeBack.appendChild(backAbility);
-  });
+  }); */
   let backHeight = document.createElement("p");
   backHeight.textContent = `Height: ${pokemon.height}`;
   let backWeight = document.createElement("p");
