@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-    background-color: #f5f3e4;
-}
-
 header > h1 {
   font-family: "Pokemon";
   src: url("//db.onlinewebfonts.com/t/f4d1593471d222ddebd973210265762a.eot");
@@ -59,7 +55,7 @@ header > h1 {
 
 .scene {
   width: 200px;
-  height: 260px;
+  height: 281px;
   /* border: 1px solid black; */
   margin: 10px;
   perspective: 600px;
@@ -85,24 +81,26 @@ header > h1 {
   text-align: center;
   font-weight: bold;
   backface-visibility: hidden;
-  border-radius: 10px
 }
 
 .card__face--front {
-  background: red;
   text-align: center;
   font-family: "Pokemon";
 }
 
-.card__face--front img {
-  height: 190px;
-  width: 190px;
-  margin: 5px;
+.card__face--back {
+  background: rgb(247, 215, 209);
+  transform: rotateY(180deg);
+  color: black;
+  font-size: .75em;
+  border: 10px solid red;
+  border-radius: 10px;
 }
 
-.card__face--back {
-  background: blue;
-  transform: rotateY(180deg);
-  color: white;
+.card__face--back > img {
+  height: 165px;
+  width: 165px;
+  margin: 5px 0px 7px 0px; 
 }
+
 
