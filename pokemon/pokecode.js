@@ -94,9 +94,22 @@ function populateCardFront(pokemon) {
 function populateCardBack(pokemon) {
     let pokeBack = document.createElement('div')
     pokeBack.className = 'card__face card__face--back'
-    let backLabel = document.createElement('p')
-    backLabel.textContent = `Moves: ${pokemon.moves.length}`
-    pokeBack.appendChild(backLabel)
+    pokemon.types.forEach((pokeType) => {
+        let backType = document.createElement('p')
+        backType.textContent = `Type: ${pokeType.type.name}`
+        pokeBack.appendChild(backType)
+    })
+    pokemon.abilities.forEach((pokeAbility) => {
+        let backAbility = document.createElement('p')
+        backAbility.textContent = `Ability: ${pokeAbility.ability.name}`
+        pokeBack.appendChild(backAbility)
+    })
+    let backHeight = document.createElement('p')
+    backHeight.textContent = `Height: ${pokemon.height}`
+    let backWeight = document.createElement('p')
+    backWeight.textContent = `Weight: ${pokemon.weight}`
+    pokeBack.appendChild(backHeight)
+    pokeBack.appendChild(backWeight)
     return pokeBack
 }
 

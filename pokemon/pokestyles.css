@@ -103,5 +103,6 @@ header > h1 {
 .card__face--back {
   background: blue;
   transform: rotateY(180deg);
+  color: white;
 }
 
