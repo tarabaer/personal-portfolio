@@ -21,17 +21,13 @@ newButton.addEventListener("click", () => {
   let pokeName = prompt("Name your new pokemon!");
   let pokeHeight = prompt("What is the height of your new pokemon?");
   let pokeWeight = prompt("What is the weight of your pokemon?");
+  let pokeAbilities = prompt("What abilities does your pokemon have? (use a comma separated list pls)")
+  let abilitiesArray = getAbilitiesArray(pokeAbilities)
   let newPokemon = new Pokemon(
     pokeName,
     pokeHeight,
     pokeWeight,
-    [
-        {
-            ability: {
-                name: "aggressive sleep",
-            },
-        },
-    ],
+    abilitiesArray,
     ["slap", "punch"],
     [
       {
@@ -44,6 +40,17 @@ newButton.addEventListener("click", () => {
   console.log(newPokemon);
   populatePokeCard(newPokemon);
 });
+
+function getAbilitiesArray(commaString) {
+  let tempArray = commaString.split(',')
+  return tempArray.map((abilityName) => {
+      return {
+        ability: {
+          name: abilityName
+        }
+      }
+  })
+}
 
 chooseButton.addEventListener("click", () => {
   let pokeNameOrId = prompt("Enter Pokemon ID or Name:").toLowerCase();
