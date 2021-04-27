@@ -108,8 +108,8 @@ header > h2 {
 }
 
 .card__face--back > img {
-  height: 165px;
-  width: 165px;
+  height: 100px;
+  width: 100px;
   margin: 5px 0px 7px 0px; 
 }
 

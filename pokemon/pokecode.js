@@ -69,7 +69,7 @@ async function getAPIData(url) {
 }
 
 function loadPage() {
-  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=25&offset=150`).then(
+  getAPIData(`https://pokeapi.co/api/v2/pokemon?limit=10&offset=660`).then(
     async (data) => {
       for (const singlePokemon of data.results) {
         await getAPIData(singlePokemon.url).then((pokeData) =>
@@ -111,6 +111,10 @@ function populateCardBack(pokemon) {
   pokeBack.className = "card__face card__face--back";
   let backImage = document.createElement("img");
   backImage.src = getImageFileName(pokemon);
+  backImage.addEventListener('error', (err) => {
+    console.log(`Broken Image: ${err}`)
+    backImage.src = 'pokeimages/pokeball.png'
+  })
   pokeBack.appendChild(backImage);
 
   let pokeName = document.createElement('p')
