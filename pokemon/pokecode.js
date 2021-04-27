@@ -4,13 +4,12 @@ const chooseButton = document.querySelector("#chooseYourPokemon");
 const newButton = document.querySelector("#newButton");
 
 class Pokemon {
-  constructor(name, height, weight, abilities, moves, types) {
+  constructor(name, height, weight, abilities, types) {
     this.id = 900;
     this.name = name;
     this.height = height;
     this.weight = weight;
     this.abilities = abilities;
-    this.moves = moves;
     this.types = types;
   }
 }
@@ -28,7 +27,6 @@ newButton.addEventListener("click", () => {
     pokeHeight,
     pokeWeight,
     abilitiesArray,
-    ["slap", "punch"],
     [
       {
         type: {
