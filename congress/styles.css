@@ -12,10 +12,40 @@
 
 header > h1 {
     text-align: center;
+    padding: 15px 0px 10px 0px;
 }
 
 #buttonHeader {
     text-align: center;
+    padding: 5px 0px 5px 0px;
+}
+
+#buttonHeader > button {
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+#seniorityButton {
+    background-color: red;
+    color: white;
+}
+
+#birthdayButton {
+    background-color: white;
+    color: black;
+}
+
+#missedVotes {
+    background-color: blue;
+    color: white;
+}
+
+#partyVotes {
+    background-color: red;
+    color: white;
 }
 
 .figureDiv {
