@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'distant_galaxyregular';
+    src: url('~/Desktop/Scripting/Personal Portfolio/starwarsfont/distgrg_-webfont.woff2') format('woff2'),
+         url('~/Desktop/Scripting/Personal Portfolio/starwarsfont/distgrg_-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0;
     font-family: 'Poppins', sans-serif;
@@ -7,7 +15,8 @@ header > h1 {
     color: white;
     text-align: center;
     margin: 8px;
-}
+    font-family: 'distant_galaxyregular';
+} 
 
 #div {
     height: 100vh;
