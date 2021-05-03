@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'distant_galaxyregular';
-    src: url('starwarsfont/distgrg_-webfont.woff2') format('woff2'),
-         url('starwarsfont/distgrg_-webfont.woff') format('woff');
+    src: url('../starwarsfont/distgrg_-webfont.woff2') format('woff2'),
+         url('../starwarsfont/distgrg_-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
