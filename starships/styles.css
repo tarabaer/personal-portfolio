@@ -1,27 +1,35 @@
+@font-face {
+    font-family: "distant_galaxyregular";
+    src: url("../starwarsfont/distgrg_-webfont.woff2") format("woff2"),
+      url("../starwarsfont/distgrg_-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+
 :root {
     margin: 0;
     box-sizing: border-box;
-}
-
-header {
-    color: white;
-    text-align: center;
     font-family: 'Poppins', sans-serif;
 }
 
 header > h1 {
-    margin: 4px;
-    font-size: xx-large;
+    font-family: 'distant_galaxyregular';
+    font-size: 65px;
+    -webkit-text-stroke: #ffe81f 1px;
+    color: black;
 }
 
 header > p {
-    font-size: 18px;
+    font-family: 'distant_galaxyregular';
+    color: #ffe81f;
+    font-size: 25px;
     margin: 4px;
+    text-align: center;
+    margin: 0px 0px 25px 0px;
 }
 
 main {
     display: flex;
-    /*height: 100vh;*/
 }
 
 .shipView {
@@ -33,7 +41,6 @@ main {
 nav {
     width: 250px;
     margin-left: 15px;
-    font-family: 'Poppins', sans-serif;
 }
 
 img, nav {
@@ -54,6 +61,12 @@ a {
 
 li {
     list-style-type: none;
+    padding: 0px 0px 3px 0px;
+    font-family: 'distant_galaxyregular';
+}
+
+li:hover {
+    color: #ffe81f;
 }
 
 footer {
