@@ -1,8 +1,8 @@
 @font-face {
   font-family: "pokemonsolid";
-  src: url("pokemon/f4d1593471d222ddebd973210265762a-webfont.woff2")
+  src: url("pokemonfont/f4d1593471d222ddebd973210265762a-webfont.woff2")
       format("woff2"),
-    url("pokemon/f4d1593471d222ddebd973210265762a-webfont.woff") format("woff");
+    url("pokemonfont/f4d1593471d222ddebd973210265762a-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -14,7 +14,7 @@
 }
 
 header > h1 {
-  font-family: "Pokemon";
+  font-family: "pokemonsolid";
   font-size: 50px;
   text-align: center;
   color: #ffcb05;
@@ -23,7 +23,7 @@ header > h1 {
 }
 
 header > h2 {
-  font-family: "Pokemon";
+  font-family: "pokemonsolid";
   text-align: center;
   font-size: medium;
 }
@@ -86,7 +86,6 @@ header > h2 {
 
 .card__face--front {
   text-align: center;
-  font-family: "Pokemon";
 }
 
 .card__face--back {
@@ -99,17 +98,19 @@ header > h2 {
 }
 
 .pokeName {
-  font-size: 1.5em;
+  font-size: 13px;
   font-weight: bolder;
+  font-family: 'pokemonsolid'
 }
 
 .card__face--back > img {
   height: 100px;
   width: 100px;
-  margin: 5px 0px 7px 0px;
+  margin-top: 5px;
 }
 
 .footer {
   flex-shrink: 0;
   text-align: center;
+  color: black;
 }
