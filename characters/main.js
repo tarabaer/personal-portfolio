@@ -46,22 +46,29 @@ function addStarField(element, numStars) {
         star.style.setProperty('width', '2px')
         star.style.setProperty('height', '2px')
         star.style.setProperty('background-color', 'white')
-        let xy = getRandomPosition()
+        let xy;
+        if (numStars === 1001) { 
+        xy = getRandomPosition(1) }
+        else {
+            xy = getRandomPosition(2)
+        }
         star.style.left = `${xy[0]}px`
         star.style.top = `${xy[1]}px`
-        element.appendChild(star)
+        element.appendChild(star) 
     }
 }
 
-function getRandomPosition() {
-    let y = document.body.scrollHeight
+function getRandomPosition(mult) {
+    let y = document.body.scrollHeight * mult
     let x = document.body.scrollWidth
     let randomY = Math.floor(Math.random() * y)
     let randomX = Math.floor(Math.random() * x)
     return [randomX, randomY]
 }
 
-addStarField(document.querySelector('body'), 1000)
+addStarField(document.querySelector('body'), 1001)
+
+
 
 function populateDOM(characters) {
     removeChildren(mainElement)
@@ -77,8 +84,12 @@ function populateDOM(characters) {
         charFigure.appendChild(charCaption)
 
         mainElement.appendChild(charFigure)
+        
     })
+    addStarField(document.querySelector('body'), 1000)
 }
+
+
 
 
 

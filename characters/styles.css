@@ -43,13 +43,21 @@ header > button {
   padding: 15px 10px 15px 10px;
   font-family: 'distant_galaxyregular';
   font-size: 15px;
+  cursor: pointer;
 }
+
+header > button:hover {
+  background-color: black;
+  color: #ffe81f;
+}
+
 
 
 #main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  min-height: 75%;
 }
 
 body {
