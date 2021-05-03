@@ -36,9 +36,17 @@ function populateCongressGrid(simplePeople) {
     let personFig = document.createElement("figure");
     let figImg = document.createElement("img");
     let figCaption = document.createElement("figcaption");
+    let color;
 
     figImg.src = person.imgURL;
     figCaption.textContent = `${person.name}`;
+    console.log(person.party)
+    if (person.party === "R") {color = "red"}
+    else if (person.party === "D") {color = "blue"}
+    else if (person.party === "ID") {color = "green"}
+    else {color = "black"};
+    personDiv.style.backgroundColor = color;
+
 
     personFig.appendChild(figImg);
     personFig.appendChild(figCaption);
@@ -59,6 +67,7 @@ function getSimplifiedCongress(congressPeople) {
       date_of_birth: parseInt(person.date_of_birth, 10),
       missed_votes_pct: person.missed_votes_pct,
       votes_with_party_pct: person.votes_with_party_pct,
+      party: person.party
     };
   });
 }
