@@ -64,3 +64,9 @@ header > h1 {
 figCaption {
     text-align: center;
 }
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    color: black;
+}
