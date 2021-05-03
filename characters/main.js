@@ -7,20 +7,26 @@ const mainHeader = document.createElement('header')
 
 document.body.insertBefore(mainHeader, mainElement)
 
+var sabersound = new Audio();
+sabersound.src = '../utils/sabersound.mp3';
+
 const maleButton = document.createElement('button')
 maleButton.textContent = 'Male Characters'
 mainHeader.appendChild(maleButton)
 maleButton.addEventListener('click', () => populateDOM(maleCharacters))
+maleButton.addEventListener('click', () => sabersound.play())
 
 const femaleButton = document.createElement('button')
 femaleButton.textContent = 'Female Characters'
 mainHeader.appendChild(femaleButton)
 femaleButton.addEventListener('click', () => populateDOM(femaleCharacters))
+femaleButton.addEventListener('click', () => sabersound.play())
 
 const othersButton = document.createElement('button')
 othersButton.textContent = 'Other Characters'
 mainHeader.appendChild(othersButton)
 othersButton.addEventListener('click', () => populateDOM(otherCharacters))
+othersButton.addEventListener('click', () => sabersound.play())
 
 const maleCharacters = people.filter(person => person.gender === 'male')
 const femaleCharacters = people.filter(person => person.gender === 'female')
@@ -73,6 +79,7 @@ function populateDOM(characters) {
         mainElement.appendChild(charFigure)
     })
 }
+
 
 
 
