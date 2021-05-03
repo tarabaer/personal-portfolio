@@ -125,20 +125,30 @@ function populateCardBack(pokemon) {
 let typeLabel = document.createElement('p')
   typeLabel.textContent = "Type(s):"
   pokeBack.appendChild(typeLabel) 
-  pokemon.types.forEach((pokeType) => {
-    let backType = document.createElement("p");
-    backType.textContent = pokeType.type.name;
-    pokeBack.appendChild(backType);
+  let types = ""
+  let backType = document.createElement("p");
+  pokemon.types.forEach((pokeType, i) => {
+    types += pokeType.type.name 
+    if (i !== pokemon.types.length - 1) {
+      types += ", "
+    } 
   });
+  backType.textContent = types;
+  pokeBack.appendChild(backType);
 
   let abilityLabel = document.createElement('p')
   abilityLabel.textContent = "Abilities:"
   pokeBack.appendChild(abilityLabel)
-  pokemon.abilities.forEach((pokeAbility) => {
-    let backAbility = document.createElement("p");
-    backAbility.textContent = pokeAbility.ability.name;
-    pokeBack.appendChild(backAbility);
+  let abilities = ""
+  let backAbility = document.createElement("p"); 
+  pokemon.abilities.forEach((pokeAbility, i) => { 
+    abilities += pokeAbility.ability.name
+    if (i !== pokemon.abilities.length - 1) {
+      abilities += ", "
+    }
   });  
+  backAbility.textContent = abilities;
+    pokeBack.appendChild(backAbility);
 
   let backHeight = document.createElement("p");
   backHeight.textContent = `Height: ${pokemon.height}`
