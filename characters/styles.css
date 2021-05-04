@@ -51,8 +51,6 @@ header > button:hover {
   color: #ffe81f;
 }
 
-
-
 #main {
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +73,13 @@ figure > img {
   z-index: 1;
 }
 
+figcaption {
+  position: relative;
+  top: -15px;
+}
+
 footer {
   color: darkgray;
   text-align: center;
+  margin-top: 20px;
 }
