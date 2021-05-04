@@ -1,6 +1,9 @@
 * {
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
     background-color: #d9cdb8;
 }
 
@@ -55,18 +58,45 @@ header > h1 {
     color: white;
 }
 
+#seniorityButton:hover {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}
+
+#birthdayButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#missedVotes:hover {
+    background-color: white;
+    color: blue;
+    cursor: pointer;
+}
+
+#partyVotes:hover {
+    background-color: white;
+    color: red;
+    cursor: pointer;
+}
+
 .figureDiv {
-    padding: .5em;
-    margin: .5em;
-    box-shadow: 7px 5px 8px #022E40;
+    padding: 10px 5px 15px 5px;
+    margin: .75em;
+    box-shadow: 7px 5px 8px black;
 }
 
 figCaption {
     text-align: center;
+    color: white;
+    font-family: 'Poppins';
 }
 
 footer {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 15px;
     color: black;
 }
