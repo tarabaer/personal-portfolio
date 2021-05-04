@@ -44,6 +44,8 @@ figcaption {
     color: white;
     padding: 15px;
     top: -7px;
+    font-family: 'distant_galaxyregular';
+    font-size: 25px;
 }
 
 footer {
